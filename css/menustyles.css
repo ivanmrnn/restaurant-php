@@ -1,0 +1,75 @@
+/* MENU PAGE */
+.menu-container {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--grayish-white);
+}
+
+/* HEADER */
+
+.header {
+    padding: 2rem;
+}
+
+.company-image {
+    width: 44px;
+    height: 48px;
+}
+
+.cart-quantity-button {
+    padding: 1rem 2rem;
+    background: var(--orange);
+}
+
+.cart-quantity-button h3 {
+    color: white;
+}
+
+/* CATEGORIES */
+
+.appetizers-container {
+    padding: 2rem;
+}
+
+.categories-tab-list {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    gap: 135px;
+    z-index: 1;
+    background: white;
+}
+
+.signature-dishes-container {
+    background: #efE9db;
+}
+
+.signature-dishes {
+    padding: 4rem 2rem;
+}
+
+.signature-dishes-list {
+    width: 100%;
+}
+
+.signature-dish-container {
+    width: 280px;
+    padding: 2rem;
+    background: white;
+}
+
+.signature-dish-description {
+    min-height: 65px;
+}
+
+.signature-dishes-action-container {
+    width: 100%;
+}
+
+.signature-dishes-action-container h3{
+    color: var(--green);
+}
+
+.add-to-cart-button {
+    padding: 0.5rem 2rem;
+    background: var(--orange);
+}
