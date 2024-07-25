@@ -4,64 +4,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edible</title>
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-    <div class="home">
-        <div class="container">
-            <div class="header-container">
-                <div class="header">
-                    <div class="company-container">
-                        <img class="company-image">
-                        <h2 class="bold">Edible</h2>
-                    </div>
-                    <button class="home-button">
-                        <h3 class="bold">Home</h3>
-                    </button>
-                    <button class="menu-button">
-                        <h3 class="bold">Menu</h3>
-                    </button>
-                    <button class="sign-in-button">
-                        <h3 class="bold">Sign In</h3>
-                    </button>
+    <div class="home flex column">
+
+        <div class="home-container section-container flex column align-center">
+            <div class="header-container section flex align-center space-between ">
+                <div class="company-container flex big-gap">
+                    <img class="company-image" src="images/edible-logo.png">
+                    <h2 class="bold">Edible</h2>
+                </div>
+                <button class="order-now-button basic-shadow">
+                    <h3 class="bold">Order Now</h3>
+                </button>
+            </div>
+            <div class="banner-container section flex align-center space-between">
+                <div class="banner-description-container">
+                    <h1 class="bold">Experience the finest dining in Batangas City at Edible.</h1>
+                </div>
+                <div class="banner-image-container">
+                    <img class="banner-image food-shadow" src="images/dimsum.png">
                 </div>
             </div>
-            <div class="banner-container">
-                <div class="banner">
-                    <div class="banner-description-container">
-                        <h1 class="bold">Experience the finest dining in Batangas City at Edible</h1>
-                        <div class="banner-description-action-container">
-                            <button class="banner-order-button">
-                                <h3 class="bold">Order Now</h3>
-                            </button>
-                            <button class="banner-reservation-button">
-                                <h3 class="bold">Book a Reservation</h3>
-                            </button>
+        </div>
+       
+        <div class="signature-dishes-container section-container flex justify-center">
+            <div class="signature-dishes section flex column align-center huge-gap">
+                <h1 class="bold">Signature Dishes</h1>
+                <div class="signature-dishes-list flex space-between">
+
+                    <div class="signature-dish-container basic-shadow flex justify-center radius">
+                        <img class="signature-dish-image food-shadow" src="images/dimsum.png">
+                        <div class="signature-dish flex align-center column big-gap">
+                            <h3 class="bold">Dim Sum Dish</h3>
+                            <p class="signature-dish-description">Savory dim sum dumplings with crisp carrots and cool lettuce.</p>
+                            <div class="signature-dishes-action-container flex align-center space-between">
+                                <h3 class="bold">₱200</h3>
+                                <button class="add-to-cart-button radius basic-shadow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="white" d="M17 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M1 2v2h2l3.6 7.59l-1.36 2.45c-.15.28-.24.61-.24.96a2 2 0 0 0 2 2h12v-2H7.42a.25.25 0 0 1-.25-.25q0-.075.03-.12L8.1 13h7.45c.75 0 1.41-.42 1.75-1.03l3.58-6.47c.07-.16.12-.33.12-.5a1 1 0 0 0-1-1H5.21l-.94-2M7 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2"/></svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <div class="banner-image-container">
-                        <img>
+
+                    <div class="signature-dish-container basic-shadow flex justify-center radius">
+                        <img class="signature-dish-image food-shadow" src="images/beef-salad.png">
+                        <div class="signature-dish flex align-center column big-gap">
+                            <h3 class="bold">Beef Salad</h3>
+                            <p class="signature-dish-description">Tender beef liver stir-fried with onions and tomatoes.</p>
+                            <div class="signature-dishes-action-container flex align-center space-between">
+                                <h3 class="bold">₱200</h3>
+                                <button class="add-to-cart-button radius basic-shadow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="white" d="M17 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M1 2v2h2l3.6 7.59l-1.36 2.45c-.15.28-.24.61-.24.96a2 2 0 0 0 2 2h12v-2H7.42a.25.25 0 0 1-.25-.25q0-.075.03-.12L8.1 13h7.45c.75 0 1.41-.42 1.75-1.03l3.58-6.47c.07-.16.12-.33.12-.5a1 1 0 0 0-1-1H5.21l-.94-2M7 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2"/></svg>
+                                </button>
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="signature-dish-container basic-shadow flex justify-center radius">
+                        <img class="signature-dish-image food-shadow" src="images/mixed-sashimi-set.png">
+                        <div class="signature-dish flex align-center column big-gap">
+                            <h3 class="bold">Mixed Sashimi Set</h3>
+                            <p class="signature-dish-description">A colorful array of thinly sliced sashimi.</p>
+                            <div class="signature-dishes-action-container flex align-center space-between">
+                                <h3 class="bold">₱200</h3>
+                                <button class="add-to-cart-button radius basic-shadow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="white" d="M17 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M1 2v2h2l3.6 7.59l-1.36 2.45c-.15.28-.24.61-.24.96a2 2 0 0 0 2 2h12v-2H7.42a.25.25 0 0 1-.25-.25q0-.075.03-.12L8.1 13h7.45c.75 0 1.41-.42 1.75-1.03l3.58-6.47c.07-.16.12-.33.12-.5a1 1 0 0 0-1-1H5.21l-.94-2M7 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="view-full-menu-button basic-shadow">
+                    <h3 class="bold">View Full Menu</h3>
+                </button>
+            </div>
+        </div>
+        
+        <div class="about-us-container section-container flex justify-center">
+            <div class="about-us section flex align-center space-between">
+                <img class="about-us-image basic-shadow" src="images/restaurant-table.jpg">
+                <div class="about-us-description-container flex column big-gap">
+                    <h1 class="bold">About Us</h1>
+                    <p>At Edible, we believe in creating more than just meals – we create experiences. Established in 2024, our restaurant has become a beloved spot for locals and visitors alike.</p> 
+                    <p>Our passion for food drives us to innovate and delight our guests with a blend of traditional and contemporary flavors. From our kitchen to your table, every dish is prepared with love and care, ensuring the highest quality and taste.</p>
                 </div>
             </div>
-            <div class="signature-dishes-container">
-                <div class="signature-dishes">
-                    <h1 class="bold">Signature Dishes</h1>
-                    <div class="signature-dishes-list-container"></div>
-                    <button class="view-full-menu-button">
-                        <h3 class="bold">View Full Menu</h3>
+        </div>
+
+        <div class="footer-container section-container flex justify-center">
+            <div class="footer section flex align-center space-between">
+                <div class="footer-contact-container flex column big-gap">
+
+                    <div class="footer-contact flex align-center gap">
+                        <div class="footer-contact-svg-container flex align-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="white" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                        </div>
+                        <p>21 Street, Batangas city</p>
+                    </div>
+
+                    <div class="footer-contact flex align-center gap">
+                        <div class="footer-contact-svg-container flex align-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><path fill="white" d="M231.88 175.08A56.26 56.26 0 0 1 176 224C96.6 224 32 159.4 32 80a56.26 56.26 0 0 1 48.92-55.88a16 16 0 0 1 16.62 9.52l21.12 47.15v.12A16 16 0 0 1 117.39 96c-.18.27-.37.52-.57.77L96 121.45c7.49 15.22 23.41 31 38.83 38.51l24.34-20.71a8 8 0 0 1 .75-.56a16 16 0 0 1 15.17-1.4l.13.06l47.11 21.11a16 16 0 0 1 9.55 16.62"/></svg>
+                        </div>
+                        <p>09876543210</p>
+                    </div>
+
+                    <div class="footer-contact flex align-center gap">
+                        <div class="footer-contact-svg-container flex align-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="white" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m-.4 4.25l-7.07 4.42c-.32.2-.74.2-1.06 0L4.4 8.25a.85.85 0 1 1 .9-1.44L12 11l6.7-4.19a.85.85 0 1 1 .9 1.44"/></svg>
+                        </div>
+                        <p>info@edible.com</p>
+                    </div>
+
+                </div>
+
+                <div class="footer-description-container flex column gap">
+                    <h3 class="bold">Attributions</h3>
+                    <p>Images from FreePik and Pexels</p>
+                    <button class="attribution-list-button">
+                        <p class="bold">See atrribution list</p>
                     </button>
-                </div>
-            </div>
-            <div class="reservation-container">
-                <div class="reservation">
-                    <div class="reservation-image-container"></div>
-                    <div class="reservation-description-container"></div>
-                </div>
-            </div>
-            <div class="footer-container">
-                <div class="footer">
-                    <div class="footer-contact-container"></div>
-                    <div class="footer-description-container"></div>
+                    <p>Icons from Iconify</p>
                 </div>
             </div>
         </div>
