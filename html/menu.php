@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/menustyles.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/menustyles.css">
 </head>
 <body>
     <div class="menu-container flex column">
@@ -13,17 +13,19 @@
         <div class="header-container section-container flex justify-center">
             <div class="header section flex align-center space-between ">
                 
-                <div class="header-left flex big-gap">
+                <div class="header-left flex big-gap align-center">
                     
                     <div class="company-container flex align-center big-gap">
-                        <img class="company-image" src="/images/edible-logo.png">
+                        <img class="company-image" src="../images/edible-logo.png">
                         <h2 class="bold">Edible</h2>
                     </div>
     
-                    <button class="home-button">
-                        <h3 class="bold">Home</h3>
-                    </button>
-
+                    <a href="../index.php">
+                        <button class="home-button">
+                            <h3 class="bold">Home</h3>
+                        </button>
+                    </a>
+                
                 </div>
 
                 <div class="header-right flex big-gap">

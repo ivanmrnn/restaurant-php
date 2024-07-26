@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edible</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/homestyles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/homestyles.css">
 </head>
 <body>
     <div class="home flex column">
@@ -13,10 +13,10 @@
         <div class="home-container section-container flex column align-center">
             <div class="header section flex align-center space-between ">
                 <div class="company-container flex big-gap">
-                    <img class="company-image" src="/images/edible-logo.png">
+                    <img class="company-image" src="images/edible-logo.png">
                     <h2 class="bold">Edible</h2>
                 </div>
-                <a href="menu.html">
+                <a href="html/menu.php">
                     <button class="order-now-button basic-shadow">
                         <h3 class="bold">Order Now</h3>
                     </button>
@@ -27,7 +27,7 @@
                     <h1 class="bold">Experience the finest dining in Batangas City at Edible.</h1>
                 </div>
                 <div class="banner-image-container">
-                    <img class="banner-image food-shadow" src="/images/dimsum.png">
+                    <img class="banner-image food-shadow" src="images/dimsum.png">
                 </div>
             </div>
         </div>
@@ -38,7 +38,7 @@
                 <div class="signature-dishes-list flex space-between">
 
                     <div class="signature-dish-container basic-shadow flex justify-center radius">
-                        <img class="signature-dish-image food-shadow" src="/images/dimsum.png">
+                        <img class="signature-dish-image food-shadow" src="images/dimsum.png">
                         <div class="signature-dish flex align-center column big-gap">
                             <h3 class="bold">Dim Sum Dish</h3>
                             <p class="signature-dish-description">Savory dim sum dumplings with crisp carrots and cool lettuce.</p>
@@ -52,7 +52,7 @@
                     </div>
 
                     <div class="signature-dish-container basic-shadow flex justify-center radius">
-                        <img class="signature-dish-image food-shadow" src="/images/beef-salad.png">
+                        <img class="signature-dish-image food-shadow" src="images/beef-salad.png">
                         <div class="signature-dish flex align-center column big-gap">
                             <h3 class="bold">Beef Salad</h3>
                             <p class="signature-dish-description">Tender beef liver stir-fried with onions and tomatoes.</p>
@@ -66,7 +66,7 @@
                     </div>
 
                     <div class="signature-dish-container basic-shadow flex justify-center radius">
-                        <img class="signature-dish-image food-shadow" src="/images/mixed-sashimi-set.png">
+                        <img class="signature-dish-image food-shadow" src="images/mixed-sashimi-set.png">
                         <div class="signature-dish flex align-center column big-gap">
                             <h3 class="bold">Mixed Sashimi Set</h3>
                             <p class="signature-dish-description">A colorful array of thinly sliced sashimi.</p>
@@ -88,7 +88,7 @@
         
         <div class="about-us-container section-container flex justify-center">
             <div class="about-us section flex align-center space-between">
-                <img class="about-us-image basic-shadow" src="/images/restaurant-table.jpg">
+                <img class="about-us-image basic-shadow" src="images/restaurant-table.jpg">
                 <div class="about-us-description-container flex column big-gap">
                     <h1 class="bold">About Us</h1>
                     <p>At Edible, we believe in creating more than just meals – we create experiences. Established in 2024, our restaurant has become a beloved spot for locals and visitors alike.</p> 
