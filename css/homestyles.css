@@ -16,10 +16,7 @@
     padding: 2rem;
 }
 
-.company-image {
-    width: 44px;
-    height: 48px;
-}
+
 
 .order-now-button {
     background: var(--orange);
@@ -145,6 +142,10 @@
     color: white;
 }
 
-.footer-description-container {
-    width: 540px;
+.footer-attribution-container {
+    width: 270px;
+}
+
+.footer-membership-container {
+    width: 270px;
 }

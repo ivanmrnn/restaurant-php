@@ -12,11 +12,11 @@
 
         <div class="home-container section-container flex column align-center">
             <div class="header section flex align-center space-between ">
-                <div class="company-container flex big-gap">
+                <div class="company-container flex big-gap align-center">
                     <img class="company-image" src="images/edible-logo.png">
                     <h2 class="bold">Edible</h2>
                 </div>
-                <a href="html/menu.php">
+                <a href="html/menu-page.php">
                     <button class="order-now-button basic-shadow">
                         <h3 class="bold">Order Now</h3>
                     </button>
@@ -80,9 +80,11 @@
                     </div>
 
                 </div>
-                <button class="view-full-menu-button basic-shadow">
-                    <h3 class="bold">View Full Menu</h3>
-                </button>
+                <a href="html/menu-page.php">
+                    <button class="view-full-menu-button basic-shadow">
+                        <h3 class="bold">View Full Menu</h3>
+                    </button>
+                </a>
             </div>
         </div>
         
@@ -98,7 +100,7 @@
         </div>
 
         <div class="footer-container section-container flex justify-center">
-            <div class="footer section flex align-center space-between">
+            <div class="footer section flex space-between">
                 <div class="footer-contact-container flex column big-gap">
 
                     <div class="footer-contact flex align-center gap">
@@ -124,13 +126,23 @@
 
                 </div>
 
-                <div class="footer-description-container flex column gap">
+                <div class="footer-attribution-container flex column gap">
                     <h3 class="bold">Attributions</h3>
-                    <p>Images from FreePik and Pexels</p>
+                    <p>Images from FreePik and <a href="https://www.pexels.com" class="bold pointer" target="_blank">Pexels</a></p>
                     <button class="attribution-list-button">
-                        <p class="bold">See atrribution list</p>
+                        <p class="bold">See attribution list</p>
                     </button>
-                    <p>Icons from Iconify</p>
+                    <p>Icons from <a href="https://iconify.design" class="bold pointer" target="_blank">Iconify</a></p>
+                </div>
+
+                <div class="footer-membership-container flex column gap">
+                    <h3 class="bold">Membership</h3>
+                    <p>Earn a 10% discount by becoming a member</p>
+                    <a href="html/login-page.php">
+                        <button class="footer-membership-button">
+                            <p class="bold">Log In or Sign Up</p>
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
