@@ -1,5 +1,6 @@
 <?php
-    include("../scripts/connection.php")
+    include("../scripts/connection.php");
+    $show_signup = isset($_GET['show_signup']) && $_GET['show_signup'] == 1;
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +23,7 @@
         
 
         <!-- Login Container -->
-        <div id="login-container" class="login-container flex justify-center align-center column big-gap radius basic-shadow">
+        <div id="login-container" class="login-container flex justify-center align-center column big-gap radius basic-shadow" <?php if ($show_signup) echo 'style="display:none;"'; ?>>
             <h2 class="bold">Log In to your Account</h2>
             <p>Earn a 10% discount by becoming a member</p>
             <form action="../scripts/login.php" class="login-form flex column gap align-center" method="post">
@@ -37,7 +38,7 @@
                     </button>
                 </div>
 
-                <?php if (isset($_GET['error']) && $_GET['error'] == 1): ?>
+                <?php if (isset($_GET['login_error']) && $_GET['login_error'] == 1): ?>
                     <p style="color: red">Invalid username or password</p>
                 <?php endif; ?>
 
@@ -47,7 +48,7 @@
         </div>
 
         <!-- Sign Up Container -->
-        <div id="signup-container" class="login-container flex justify-center align-center column big-gap basic-shadow radius" style="display:none;">
+        <div id="signup-container" class="login-container flex justify-center align-center column big-gap basic-shadow radius" <?php if (!$show_signup) echo 'style="display:none;"'; ?>>
             <h1 class="bold">Sign Up </h1>
             <form class="signup-form flex column gap" action="../scripts/signup.php" method="post">
 
@@ -71,18 +72,22 @@
                     </button>
                 </div>
 
+                
+                <span id="password-match-error" style="color: red; display: none;">Passwords do not match</span>
                 <?php
-                if (isset($_GET['error'])) {
-                    if ($_GET['error'] == 1) {
+                if (isset($_GET['signup_error'])) {
+                    if ($_GET['signup_error'] == 1) {
                         echo '<p style="color:red;">Username already exists</p>';
-                    } elseif ($_GET['error'] == 2) {
+                    } elseif ($_GET['signup_error'] == 2) {
                         echo '<p style="color:red;">Failed to create account. Please try again.</p>';
                     }
                 }
                 ?>
                 
+                <button class="signup-button flex justify-center align-center basic shadow" type="submit"><p class="bold">Sign Up</p></button>
+                
             </form>
-            <button class="signup-button flex justify-center align-center basic shadow" type="submit"><p class="bold">Sign Up</p></button>
+            
             <button class="back-to-login-button"><p class="bold">Back to Login</p></button>
         </div>
 
@@ -90,6 +95,7 @@
 </body>
 <script>
     
+    document.addEventListener('DOMContentLoaded', function() {
     const signupContainer = document.getElementById('signup-container');
     const loginContainer = document.getElementById('login-container');
 
@@ -111,41 +117,25 @@
     const backToLoginButton = document.querySelector('.back-to-login-button')
     const signupPageButton = document.querySelector('.signup-page-button')
 
-    revealLoginPasswordButton.addEventListener('click', () => {
-        if (loginPasswordInput.type === 'password') {
-            loginPasswordInput.type = 'text';
-            showLoginPasswordIcon.style.display = 'none';
-            hideLoginPasswordIcon.style.display = 'block';
-        } else {
-            loginPasswordInput.type = 'password';
-            showLoginPasswordIcon.style.display = 'block';
-            hideLoginPasswordIcon.style.display = 'none';
-        }
-    });
+    const signupForm = document.querySelector('.signup-form');
+    const passwordMatchError = document.getElementById('password-match-error');
 
-    revealSignupPasswordButton.addEventListener('click', () => {
-        if (signupPasswordInput.type === 'password') {
-            signupPasswordInput.type = 'text';
-            showSignupPasswordIcon.style.display = 'none';
-            hideSignupPasswordIcon.style.display = 'block';
+    // Toggle password visibility functions
+    function togglePasswordVisibility(inputElement, showIcon, hideIcon) {
+        if (inputElement.type === 'password') {
+            inputElement.type = 'text';
+            showIcon.style.display = 'none';
+            hideIcon.style.display = 'block';
         } else {
-            signupPasswordInput.type = 'password';
-            showSignupPasswordIcon.style.display = 'block';
-            hideSignupPasswordIcon.style.display = 'none';
+            inputElement.type = 'password';
+            showIcon.style.display = 'block';
+            hideIcon.style.display = 'none';
         }
-    });
+    }
 
-    revealConfirmPasswordButton.addEventListener('click', () => {
-        if (confirmPasswordInput.type === 'password') {
-            confirmPasswordInput.type = 'text';
-            showConfirmPasswordIcon.style.display = 'none';
-            hideConfirmPasswordIcon.style.display = 'block';
-        } else {
-            confirmPasswordInput.type = 'password';
-            showConfirmPasswordIcon.style.display = 'block';
-            hideConfirmPasswordIcon.style.display = 'none';
-        }
-    });
+    revealLoginPasswordButton.addEventListener('click', () => togglePasswordVisibility(loginPasswordInput, showLoginPasswordIcon, hideLoginPasswordIcon));
+    revealSignupPasswordButton.addEventListener('click', () => togglePasswordVisibility(signupPasswordInput, showSignupPasswordIcon, hideSignupPasswordIcon));
+    revealConfirmPasswordButton.addEventListener('click', () => togglePasswordVisibility(confirmPasswordInput, showConfirmPasswordIcon, hideConfirmPasswordIcon));
 
     signupPageButton.addEventListener('click', () => {
         loginContainer.style.display = 'none';
@@ -156,6 +146,29 @@
         signupContainer.style.display = 'none';
         loginContainer.style.display = 'flex';
     });
+
+    function checkPasswordMatch() {
+        return signupPasswordInput.value === confirmPasswordInput.value;
+    }
+
+    signupForm.addEventListener('submit', function(e) {
+        if (!checkPasswordMatch()) {
+            e.preventDefault();
+            passwordMatchError.style.display = 'block';
+        } else {
+            passwordMatchError.style.display = 'none';
+        }
+    });
+
+    const initialSignupDisplay = <?php echo $show_signup ? 'true' : 'false'; ?>;
+    if (initialSignupDisplay) {
+        loginContainer.style.display = 'none';
+        signupContainer.style.display = 'flex';
+    } else {
+        loginContainer.style.display = 'flex';
+        signupContainer.style.display = 'none';
+    }
+});
 
 
 </script>

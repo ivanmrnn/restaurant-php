@@ -28,7 +28,7 @@
 
 /* CATEGORIES */
 
-.appetizers-container {
+.category {
     padding: 2rem;
 }
 
@@ -70,7 +70,20 @@
     color: var(--green);
 }
 
+.signature-dish {
+    width: 100%;
+}
+
 .add-to-cart-button {
     padding: 0.5rem 2rem;
     background: var(--orange);
+}
+
+.tab-container {
+    display: none;
+    flex-wrap: wrap;
+}
+
+.tab-container-active {
+    display: flex;
 }
