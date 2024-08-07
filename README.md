@@ -5,11 +5,12 @@ This is a web-based restaurant application created for a fictional company named
 ## How to run the restaurant web app:
 
 1. Download and install XAMPP.
-2. Clone this repository to the folder `C:/xampp/htdocs`.
-3. Run Apache and MySQL from the XAMPP control panel.
-4. Locate the `restaurant.sql` file in the database folder.
-5. Open `http://localhost/phpmyadmin/` and import the `restaurant.sql` file.
-6. Open `http://localhost/restaurant-php/` to run the website.
+2. Create a folder in C:/xampp/htdocs and name it restaurant-php
+3. Clone this repository to the folder `C:/xampp/htdocs/restaurant-php`.
+4. Run Apache and MySQL from the XAMPP control panel.
+5. Locate the `restaurant.sql` file in the database folder.
+6. Open `http://localhost/phpmyadmin/` and import the `restaurant.sql` file.
+7. Open `http://localhost/restaurant-php/` to run the website.
 
 ## Functions
 
