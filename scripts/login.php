@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check for admin login
     if ($username === 'admin' && $password === 'admin') {
         $_SESSION['admin'] = true;
-        header("Location: ../html/admin.php");
+        header("Location: ../html/admin.html");
         exit();
     }
 

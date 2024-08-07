@@ -16,7 +16,7 @@
     <div class="login flex justify-center align-center">
         <a href="../index.html" class="pointer">
             <div class="company-container flex big-gap align-center">
-                <img class="company-image" src="../images/edible-logo.png">
+                <img class="company-image" src="../images/restaurant/edible-logo.png">
                 <h2 class="bold">Edible</h2>
             </div>
         </a>

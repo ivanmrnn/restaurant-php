@@ -40,7 +40,7 @@ $conn->close();
                 <div class="header-left flex big-gap align-center">
                     <a href="../index.html" class="pointer">
                         <div class="company-container flex align-center big-gap">
-                            <img class="company-image" src="../images/edible-logo.png">
+                            <img class="company-image" src="../images/restaurant/edible-logo.png">
                             <h2 class="bold">Edible</h2>
                         </div>
                     </a>

@@ -13,7 +13,7 @@
         <div class="home-container section-container flex column align-center">
             <div class="header section flex align-center space-between ">
                 <div class="company-container flex big-gap align-center">
-                    <img class="company-image" src="images/edible-logo.png">
+                    <img class="company-image" src="images/restaurant/edible-logo.png">
                     <h2 class="bold">Edible</h2>
                 </div>
                 <a href="html/menu-page.php">
@@ -27,7 +27,7 @@
                     <h1 class="bold">Experience the finest dining in Batangas City at Edible.</h1>
                 </div>
                 <div class="banner-image-container">
-                    <img class="banner-image food-shadow" src="images/dimsum.png">
+                    <img class="banner-image food-shadow" src="images/restaurant/dimsum.png">
                 </div>
             </div>
         </div>
@@ -38,7 +38,7 @@
                 <div class="signature-dishes-list flex space-between">
 
                     <div class="signature-dish-container basic-shadow flex justify-center radius">
-                        <img class="signature-dish-image food-shadow" src="images/dimsum.png">
+                        <img class="signature-dish-image food-shadow" src="images/restaurant/dimsum.png">
                         <div class="signature-dish flex align-center column big-gap">
                             <h3 class="bold">Dim Sum Dish</h3>
                             <p class="signature-dish-description">Savory dim sum dumplings with crisp carrots and cool lettuce.</p>
@@ -52,7 +52,7 @@
                     </div>
 
                     <div class="signature-dish-container basic-shadow flex justify-center radius">
-                        <img class="signature-dish-image food-shadow" src="images/beef-salad.png">
+                        <img class="signature-dish-image food-shadow" src="images/restaurant/beef-salad.png">
                         <div class="signature-dish flex align-center column big-gap">
                             <h3 class="bold">Beef Salad</h3>
                             <p class="signature-dish-description">Tender beef liver stir-fried with onions and tomatoes.</p>
@@ -66,7 +66,7 @@
                     </div>
 
                     <div class="signature-dish-container basic-shadow flex justify-center radius">
-                        <img class="signature-dish-image food-shadow" src="images/mixed-sashimi-set.png">
+                        <img class="signature-dish-image food-shadow" src="images/restaurant/mixed-sashimi-set.png">
                         <div class="signature-dish flex align-center column big-gap">
                             <h3 class="bold">Mixed Sashimi Set</h3>
                             <p class="signature-dish-description">A colorful array of thinly sliced sashimi.</p>
@@ -90,7 +90,7 @@
         
         <div class="about-us-container section-container flex justify-center">
             <div class="about-us section flex align-center space-between">
-                <img class="about-us-image basic-shadow" src="images/restaurant-table.jpg">
+                <img class="about-us-image basic-shadow" src="images/restaurant/restaurant-table.jpg">
                 <div class="about-us-description-container flex column big-gap">
                     <h1 class="bold">About Us</h1>
                     <p>At Edible, we believe in creating more than just meals – we create experiences. Established in 2024, our restaurant has become a beloved spot for locals and visitors alike.</p> 
@@ -128,7 +128,7 @@
 
                 <div class="footer-attribution-container flex column gap">
                     <h3 class="bold">Attributions</h3>
-                    <p>Images from FreePik and <a href="https://www.pexels.com" class="bold pointer" target="_blank">Pexels</a></p>
+                    <p>Images from <a href="https://www.freepik.com" class="bold" target="_blank" rel="noopener noreferrer">FreePik</a> and <a href="https://www.pexels.com" class="bold pointer" target="_blank" rel="noopener noreferrer">Pexels</a></p>
                     <button class="attribution-list-button">
                         <p class="bold">See attribution list</p>
                     </button>
@@ -144,8 +144,63 @@
                         </button>
                     </a>
                 </div>
+
+                
+            </div>
+        </div>
+
+        <div id="modal" class="modal justify-center align-center">
+            <div class="modal-content flex column gap">
+                <span class="close-button">&times;</span>
+                <h2 class="attribution-list-text">Attribution List</h2>
+                <p class="bold">Dimsum Dish</p>
+                <p>
+                    <a href="https://www.freepik.com/free-photo/dim-sum_1123462.htm#query=food%20transparent&position=25&from_view=keyword&track=ais_user&uuid=b0d9d9ee-f0d8-4305-be2e-3d1101b4d92b" target="_blank" rel="noopener noreferrer"><u class="link">Image by mrsiraphol</u></a> on Freepik
+                </p>
+
+                <p class="bold">Mixed Sashimi Set</p>
+                <p>
+                    <a href="https://www.freepik.com/free-photo/mixed-sashimi-set_3521483.htm#from_view=detail_alsolike" target="_blank" rel="noopener noreferrer"><u class="link">Image by lifeforstock</u> on Freepik</a>
+                </p>
+
+                <p class="bold">Beef Salad</p>
+                <p>
+                    <a href="https://www.freepik.com/free-photo/roasted-grilled-beef-liver-with-onion-tomatoes-salad_6932571.htm#fromView=search&page=1&position=29&uuid=e8e04e4a-10e0-426e-b67d-66dcf8afbb39" target="_blank" rel="noopener noreferrer"><u class="link">Image by timolina</u> on Freepik</a>
+                </p>
+
+                <p class="bold">Restaurant</p>
+                <p>
+                    <a href="https://www.pexels.com/photo/close-up-photo-of-dinnerware-set-on-top-of-table-with-glass-cups-1395967/" target="_blank" rel="noopener noreferrer"><u class="link">Image by Mat Brown</u> on Freepik</a>
+                </p>
+
+                <p class="bold">Placeholder Company Logo</p>
+                <p>
+                    <a href="https://www.figma.com/community/file/1159710650809705970/placeholder-company-logos-ui-kit-untitled-ui" target="_blank" rel="noopener noreferrer"><u class="link">Company Logo by Untitled UI</u> on Figma Community</a>
+                </p>
             </div>
         </div>
     </div>
+
+    <script>
+        const modal = document.getElementById('modal');
+        const btn = document.querySelector('.attribution-list-button');
+        const span = document.querySelector('.close-button');
+
+        btn.onclick = function() {
+            modal.style.display = 'flex';
+        }
+
+        span.onclick = function() {
+            modal.style.display = 'none';
+        }
+
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+    </script>
 </body>
 </html>
