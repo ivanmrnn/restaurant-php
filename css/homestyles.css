@@ -1,4 +1,4 @@
-/* HOME PAGE */
+/* Home Page */
 
 .home {
     width: 100%;
@@ -8,7 +8,7 @@
     background: var(--grayish-white);
 }
 
-/* HEADER  */
+/* Header  */
 
 .header {
     position: absolute;
@@ -16,18 +16,13 @@
     padding: 2rem;
 }
 
-
-
 .order-now-button {
     background: var(--orange);
     padding: 1rem;
-}
-
-.order-now-button h3{
     color: white;
 }
 
-/* BANNER */
+/* Banner */
 
 .banner-container {
     padding-top: calc(125px + 1rem);
@@ -45,7 +40,7 @@
     width: 440px;   
 }
 
-/* SIGNATURE-DISHES */
+/* Signature Dishes */
 
 .signature-dishes-container {
     background: #efE9db;
@@ -59,7 +54,7 @@
     width: 100%;
 }
 
-.signature-dish-container {
+.menu-item-container {
     position: relative;
     align-items: end;
     height: 380px;
@@ -68,22 +63,19 @@
     background: white;
 }
 
-.signature-dish-image {
+.menu-item-image {
     position: absolute;
     top: -50px;
     height: 170px;
     width: 170px;
 }
 
-.signature-dish-description {
+.menu-item-description {
     min-height: 86.4px;
 }
 
-.signature-dishes-action-container {
+.menu-items-action-container {
     width: 100%;
-}
-
-.signature-dishes-action-container h3{
     color: var(--green);
 }
 
@@ -95,13 +87,11 @@
 .view-full-menu-button {
     padding: 1rem;
     background: var(--green);
-}
-
-.view-full-menu-button h3 {
     color: white;
 }
 
-/* ABOUT US */
+
+/* About Us */
 
 .about-us-container {
     background: var(--grayish-white);
@@ -121,7 +111,7 @@
     text-align: justify;
 }
 
-/* FOOTER */
+/* Footer */
 
 .footer-container {
     background: var(--black);
@@ -129,6 +119,7 @@
 
 .footer {
     padding: 2rem;
+    color: white;
 }
 
 .footer-contact-svg-container {
@@ -138,15 +129,7 @@
     border-radius: 40px;
 }
 
-.footer-container p, .footer-container h3{
-    color: white;
-}
-
-.footer-attribution-container {
-    width: 270px;
-}
-
-.footer-membership-container {
+.footer-attribution-container, .footer-membership-container {
     width: 270px;
 }
 

@@ -1,15 +1,19 @@
-/* MENU PAGE */
+/* Menu Page */
+
 .menu-container {
     width: 100%;
     min-height: 100vh;
     background: var(--grayish-white);
 }
 
-
-/* HEADER */
+/* Header */
 
 .header {
     padding: 2rem;
+}
+
+.header-container {
+    background: var(--grayish-white);
 }
 
 .company-image {
@@ -17,16 +21,81 @@
     height: 48px;
 }
 
-.cart-quantity-button {
+.cart-button {
     padding: 1rem 2rem;
     background: var(--orange);
-}
-
-.cart-quantity-button h3 {
     color: white;
 }
 
-/* CATEGORIES */
+/* Cart */
+
+#cart-modal {
+    z-index: 10;
+}
+
+.cart-item {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.cart-item-name {
+    flex-grow: 1;
+}
+
+.cart-item-quantity-input {
+    width: 60px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.cart-item-quantity-button, .clear-item-button {
+    padding: 5px 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.cart-item-quantity-button {
+    background-color: #f0f0f0;
+    width: 30px;
+    height: 30px;
+}
+
+.clear-item-button {
+    background-color: #e60000;
+    color: white;
+}
+
+.proceed-to-checkout-button {
+    padding: 1rem;
+    background: var(--green);
+    color: white;
+}
+
+.proceed-to-checkout-button span {
+    pointer-events: none;
+  }
+
+.proceed-to-checkout-button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Cart Checkout */
+
+.cancel-checkout-button {
+    padding: 1rem;
+    background: #e60000;
+    color: white;
+}
+
+.confirm-order-button {
+    padding: 1rem;
+    background: var(--green);
+    color: white;
+}
+
+/* Categories */
 
 .category {
     padding: 2rem;
@@ -36,47 +105,11 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
     gap: 135px;
-    z-index: 1;
     background: white;
 }
 
-.signature-dishes-container {
-    background: #efE9db;
-}
-
-.signature-dishes {
-    padding: 4rem 2rem;
-}
-
-.signature-dishes-list {
-    width: 100%;
-}
-
-.signature-dish-container {
-    width: 280px;
-    padding: 2rem;
-    background: white;
-}
-
-.signature-dish-description {
-    min-height: 65px;
-}
-
-.signature-dishes-action-container {
-    width: 100%;
-}
-
-.signature-dishes-action-container h3{
-    color: var(--green);
-}
-
-.signature-dish {
-    width: 100%;
-}
-
-.add-to-cart-button {
-    padding: 0.5rem 2rem;
-    background: var(--orange);
+.categories-tab.active {
+    font-weight: bold;
 }
 
 .tab-container {
@@ -86,4 +119,41 @@
 
 .tab-container-active {
     display: flex;
+}
+
+
+/* Menu items */
+
+.menu-item-container {
+    width: 280px;
+    padding: 2rem;
+    background: white;
+}
+
+.menu-item-title {
+    text-align: center;
+}
+
+.menu-item-info {
+    width: 100%;
+    height: 100%;
+    gap: 2rem;
+}
+
+.menu-item-description {
+    min-height: 65px;
+}
+
+.menu-items-action-container {
+    width: 100%;
+    color: var(--green);
+}
+
+.menu-item {
+    width: 100%;
+}
+
+.add-to-cart-button {
+    padding: 0.5rem 2rem;
+    background: var(--orange);
 }

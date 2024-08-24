@@ -1,6 +1,6 @@
 # Restaurant Web App using PHP
 
-This is a web-based restaurant application created for a fictional company named "Edible". 
+This is a restaurant web application created for a fictional company named "Edible". 
 
 ## How to run the restaurant web app:
 
@@ -41,3 +41,5 @@ This is a web-based restaurant application created for a fictional company named
 - **Restaurant**: Image by [Mat Brown](https://www.pexels.com/photo/close-up-photo-of-dinnerware-set-on-top-of-table-with-glass-cups-1395967/) on Pexels
 
 - **Placeholder Company Logo**: Logo by [Untitled UI](https://www.figma.com/community/file/1159710650809705970/placeholder-company-logos-ui-kit-untitled-ui) on Figma Community
+
+- **Icons** from [Iconify](https://iconify.design/)
