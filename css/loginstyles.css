@@ -34,11 +34,9 @@
     margin-top: 1rem;
     padding: 1rem;
     background: var(--green);
-}
-
-.login-button p, .signup-button p{
     color: white;
 }
+
 
   
 .input-username, .input-password, .input-email {
@@ -46,6 +44,6 @@
     padding: 12px 1rem; 
 }
 
-.signup-page-button p, .back-to-login-button p{
+.signup-page-button, .back-to-login-button{
     color: var(--green);
 }

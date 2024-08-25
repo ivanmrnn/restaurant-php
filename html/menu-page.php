@@ -70,49 +70,49 @@ $conn->close();
 </head>
 
 <body>
-        <!-- Header -->
-        <header class="header-container section-container flex justify-center">
-            <div class="header section-content flex align-center space-between">
-                <div class="header-left flex big-gap align-center">
-                    <a href="../index.html" class="pointer">
-                        <div class="company-container flex align-center big-gap">
-                            <img class="company-image" src="../images/restaurant/edible-logo.png" alt="Company Image">
-                            <h1 class="bold capitalize">Edible</h1>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="header-right flex big-gap align-center">
-                    <!-- If the user is logged in, display the username and a log-out button-->
-                    <?php if (isset($_SESSION['username'])): ?>
-                        <span class="bold capitalize text-medium"><?php echo $_SESSION['username']; ?></span>
-
-                        <form action="../scripts/logout.php" method="post" class="logout-form">
-                            <button type="submit" class="logout-button" aria-label="Logout">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                    <path fill="#333" d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h7v2H5v14h7v2zm11-4l-1.375-1.45l2.55-2.55H9v-2h8.175l-2.55-2.55L16 7l5 5z"/>
-                                </svg>
-                            </button>
-                        </form>
-                    <!-- If there is no user logged in, display a log-in button -->
-                    <?php else: ?>
-                        <a href="../html/login-page.php">
-                            <button class="login-button">
-                                <span class="bold capitalize text-medium">Log In</span>
-                            </button>
-                        </a>
-                    <?php endif; ?>
-
-                    <button class="cart-button basic-shadow flex gap radius" aria-label="Cart Button">
-                        <span class="bold text-medium">0</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                            <path fill="white" d="M17 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M1 2v2h2l3.6 7.59l-1.36 2.45c-.15.28-.24.61-.24.96a2 2 0 0 0 2 2h12v-2H7.42a.25.25 0 0 1-.25-.25q0-.075.03-.12L8.1 13h7.45c.75 0 1.41-.42 1.75-1.03l3.58-6.47c.07-.16.12-.33.12-.5a1 1 0 0 0-1-1H5.21l-.94-2M7 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2"/>
-                        </svg>
-                    </button>
-
-                </div>
+    <!-- Header -->
+    <header class="header-container section-container flex justify-center">
+        <div class="header section-content flex align-center space-between">
+            <div class="header-left flex big-gap align-center">
+                <a href="../index.html" class="pointer">
+                    <div class="company-container flex align-center big-gap" aria-label="Edible Company Logo">
+                        <img class="company-image" src="../images/restaurant/edible-logo.png" alt="Edible Company Logo">
+                        <strong class="text-largest capitalize">Edible</strong>
+                    </div>
+                </a>
             </div>
-        </header>
+
+            <div class="header-right flex big-gap align-center">
+                <!-- If the user is logged in, display the username and a log-out button-->
+                <?php if (isset($_SESSION['username'])): ?>
+                    <strong class="capitalize text-medium"><?php echo $_SESSION['username']; ?></strong>
+
+                    <form action="../scripts/logout.php" method="post" class="logout-form">
+                        <button type="submit" class="logout-button" aria-label="Log out">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="#333" d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h7v2H5v14h7v2zm11-4l-1.375-1.45l2.55-2.55H9v-2h8.175l-2.55-2.55L16 7l5 5z"/>
+                            </svg>
+                        </button>
+                    </form>
+                <!-- If there is no user logged in, display a log-in button -->
+                <?php else: ?>
+                    <a href="../html/login-page.php">
+                        <button class="login-button">
+                            <strong class="text-medium capitalize">Log In</strong>
+                        </button>
+                    </a>
+                <?php endif; ?>
+
+                <button class="cart-button basic-shadow flex gap radius" aria-label="View cart">
+                    <strong class="text-medium" aria-label="Items in cart">0</strong>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="white" d="M17 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M1 2v2h2l3.6 7.59l-1.36 2.45c-.15.28-.24.61-.24.96a2 2 0 0 0 2 2h12v-2H7.42a.25.25 0 0 1-.25-.25q0-.075.03-.12L8.1 13h7.45c.75 0 1.41-.42 1.75-1.03l3.58-6.47c.07-.16.12-.33.12-.5a1 1 0 0 0-1-1H5.21l-.94-2M7 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2"/>
+                    </svg>
+                </button>
+
+            </div>
+        </div>
+    </header>
 
     <!-- Menu -->
     <main class="menu-container flex column">
@@ -120,11 +120,11 @@ $conn->close();
         <!-- Cart -->
         <div id="cart-modal" class="modal justify-center align-center">
             <div class="modal-content flex column gap">
-                <span class="close-button">&times;</span>
+                <span class="close-button" aria-label="Close Cart List">&times;</span>
                 <span class="text-large">Place your order</span>
                 <div id="cart-item-list"></div>
                 <button class="proceed-to-checkout-button flex justify-center radius basic-shadow">
-                    <span class="bold capitalize">Proceed To Checkout</span>
+                    <strong class="capitalize">Proceed To Checkout</strong>
                 </button>
             </div>
         </div>
@@ -132,7 +132,7 @@ $conn->close();
         <!-- Cart Checkout -->
         <div id="checkout-modal" class="modal justify-center align-center">
             <div class="modal-content flex column gap">
-                <span class="close-button">&times;</span>
+                <span class="close-button" aria-label="Close Checkout List">&times;</span>
                 <span class="text-large">Confirm your order</span>
                 <div id="checkout-items"></div>
                 <div id="checkout-total"></div>
@@ -149,10 +149,10 @@ $conn->close();
                 </select>
                 <div class="checkout-buttons flex space-between">
                     <button class="cancel-checkout-button radius basic-shadow">
-                        <span class="bold capitalize">Cancel</span>
+                        <strong class="capitalize">Cancel</strong>
                     </button>
                     <button class="confirm-order-button radius basic-shadow">
-                        <span class="bold capitalize">Confirm Order</span>
+                        <strong class="capitalize">Confirm Order</strong>
                     </button>
                 </div>
             </div>
@@ -161,14 +161,14 @@ $conn->close();
         <!-- Successful Order -->
         <div id="success-modal" class="modal justify-center align-center">
             <div class="modal-content flex column gap">
-                <span class="close-button">&times;</span>
-                <span class="text-large">Order Placed Successfully!</span>
+                <span class="close-button" aria-label="Close success message">&times;</span>
+                <span class="text-large capitalize">Order Placed Successfully!</span>
                 <p>Your order has been placed and will be prepared shortly.</p>
             </div>
         </div>
 
         <!-- Category Tabs -->
-        <section class="categories-tab-list flex justify-center basic-shadow">
+        <nav class="categories-tab-list flex justify-center basic-shadow">
             <button class="appetizer-button categories-tab active " onclick="showTab('appetizer')">
                 <span class="capitalize text-medium">Appetizers</span>
             </button>
@@ -178,7 +178,7 @@ $conn->close();
             <button class="dessert-button categories-tab" onclick="showTab('dessert')">
                 <span class="capitalize text-medium">Desserts</span>
             </button>
-        </section>
+        </nav>
         
         <!-- Menu items by category -->
         <section class="category section-container flex column justify-center align-center big-gap">
@@ -191,7 +191,7 @@ $conn->close();
                     <article class="menu-item-container basic-shadow flex justify-center radius">
                         <div class="menu-item flex align-center column big-gap">
                             <!-- Displays the menu item name. htmlspecialchars() converts special characters to HTML -->
-                            <span class="menu-item-title bold text-medium"><?php echo htmlspecialchars($categoryMenuitem['name']); ?></span>
+                            <strong class="menu-item-title text-medium"><?php echo htmlspecialchars($categoryMenuitem['name']); ?></strong>
                             <div class="menu-item-info flex column space-between">
                                 <!-- Displays the description of the menu item -->
                                 <p class="menu-item-description"><?php echo htmlspecialchars($categoryMenuitem['description']); ?></p>

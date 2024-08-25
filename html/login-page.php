@@ -15,16 +15,16 @@
 <body>
     <div class="login flex justify-center align-center">
         <a href="../index.html" class="pointer">
-            <div class="company-container flex big-gap align-center">
-                <img class="company-image" src="../images/restaurant/edible-logo.png">
-                <h2 class="bold">Edible</h2>
+            <div class="company-container flex big-gap align-center" aria-label="Edible company logo">
+                <img class="company-image" src="../images/restaurant/edible-logo.png" alt="Edible company logo">
+                <strong class="text-largest capitalize">Edible</strong>
             </div>
         </a>
         
 
         <!-- Login Container -->
-        <div id="login-container" class="login-container flex justify-center align-center column big-gap radius basic-shadow" <?php if ($show_signup) echo 'style="display:none;"'; ?>>
-            <h2 class="bold">Log In to your Account</h2>
+        <section id="login-container" class="login-container flex justify-center align-center column big-gap radius basic-shadow" <?php if ($show_signup) echo 'style="display:none;"'; ?>>
+            <h1 class="text-large">Log In to your Account</h1>
             <p>Earn a 10% discount by becoming a member</p>
             <form action="../scripts/login.php" class="login-form flex column gap align-center" method="post">
                 <div class="input-box">
@@ -32,7 +32,7 @@
                 </div>
                 <div class="input-box flex">
                     <input class="input-password" id="login-password" name="login-password" type="password" placeholder="Password">
-                    <button type="button" class="reveal-login-password-button flex center">
+                    <button type="button" class="reveal-login-password-button flex center" aria-label="Reveal log in password">
                         <svg class="show-login-password-icon" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="var(--black)" d="M12 9a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5a5 5 0 0 1 5-5a5 5 0 0 1 5 5a5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
                         <svg class="hide-login-password-icon" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" style="display:none;"><path fill="var(--black)" d="M11.83 9L15 12.16V12a3 3 0 0 0-3-3zm-4.3.8l1.55 1.55c-.05.21-.08.42-.08.65a3 3 0 0 0 3 3c.22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53a5 5 0 0 1-5-5c0-.79.2-1.53.53-2.2M2 4.27l2.28 2.28l.45.45C3.08 8.3 1.78 10 1 12c1.73 4.39 6 7.5 11 7.5c1.55 0 3.03-.3 4.38-.84l.43.42L19.73 22L21 20.73L3.27 3M12 7a5 5 0 0 1 5 5c0 .64-.13 1.26-.36 1.82l2.93 2.93c1.5-1.25 2.7-2.89 3.43-4.75c-1.73-4.39-6-7.5-11-7.5c-1.4 0-2.74.25-4 .7l2.17 2.15C10.74 7.13 11.35 7 12 7"/></svg>
                     </button>
@@ -42,13 +42,17 @@
                     <p style="color: red">Invalid username or password</p>
                 <?php endif; ?>
 
-                <button class="login-button flex justify-center align-center basic-shadow" type="submit"><p class="bold">Sign In</p></button>
+                <button class="login-button flex justify-center align-center basic-shadow" type="submit">
+                    <strong>Sign In</strong>
+                </button>
             </form>
-            <button class="signup-page-button"><p class="bold">Sign Up</p></button>
-        </div>
+            <button class="signup-page-button">
+                <strong>Sign Up</strong>
+            </button>
+        </section>
 
         <!-- Sign Up Container -->
-        <div id="signup-container" class="login-container flex justify-center align-center column big-gap basic-shadow radius" <?php if (!$show_signup) echo 'style="display:none;"'; ?>>
+        <section id="signup-container" class="login-container flex justify-center align-center column big-gap basic-shadow radius" <?php if (!$show_signup) echo 'style="display:none;"'; ?>>
             <h1 class="bold">Sign Up </h1>
             <form class="signup-form flex column gap" action="../scripts/signup.php" method="post">
 
@@ -58,7 +62,7 @@
 
                 <div class="input-box flex">
                     <input class="input-password" id="signup-password" name="signup-password" type="password" placeholder="Password">
-                    <button type="button" class="reveal-signup-password-button flex center">
+                    <button type="button" class="reveal-signup-password-button flex center" aria-label="Reveal sign up password">
                         <svg class="show-signup-password-icon" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="var(--black)" d="M12 9a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5a5 5 0 0 1 5-5a5 5 0 0 1 5 5a5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
                         <svg class="hide-signup-password-icon" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" style="display:none;"><path fill="var(--black)" d="M11.83 9L15 12.16V12a3 3 0 0 0-3-3zm-4.3.8l1.55 1.55c-.05.21-.08.42-.08.65a3 3 0 0 0 3 3c.22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53a5 5 0 0 1-5-5c0-.79.2-1.53.53-2.2M2 4.27l2.28 2.28l.45.45C3.08 8.3 1.78 10 1 12c1.73 4.39 6 7.5 11 7.5c1.55 0 3.03-.3 4.38-.84l.43.42L19.73 22L21 20.73L3.27 3M12 7a5 5 0 0 1 5 5c0 .64-.13 1.26-.36 1.82l2.93 2.93c1.5-1.25 2.7-2.89 3.43-4.75c-1.73-4.39-6-7.5-11-7.5c-1.4 0-2.74.25-4 .7l2.17 2.15C10.74 7.13 11.35 7 12 7"/></svg>
                     </button>
@@ -66,7 +70,7 @@
 
                 <div class="input-box flex">
                     <input class="input-password" id="signup-confirm-password" name="signup-confirm-password" type="password" placeholder="Confirm Password">
-                    <button type="button" class="reveal-confirm-password-button flex center">
+                    <button type="button" class="reveal-confirm-password-button flex center" aria-label="reveal sign up confirm password">
                         <svg class="show-confirm-password-icon" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="var(--black)" d="M12 9a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5a5 5 0 0 1 5-5a5 5 0 0 1 5 5a5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
                         <svg class="hide-confirm-password-icon" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" style="display:none;"><path fill="var(--black)" d="M11.83 9L15 12.16V12a3 3 0 0 0-3-3zm-4.3.8l1.55 1.55c-.05.21-.08.42-.08.65a3 3 0 0 0 3 3c.22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53a5 5 0 0 1-5-5c0-.79.2-1.53.53-2.2M2 4.27l2.28 2.28l.45.45C3.08 8.3 1.78 10 1 12c1.73 4.39 6 7.5 11 7.5c1.55 0 3.03-.3 4.38-.84l.43.42L19.73 22L21 20.73L3.27 3M12 7a5 5 0 0 1 5 5c0 .64-.13 1.26-.36 1.82l2.93 2.93c1.5-1.25 2.7-2.89 3.43-4.75c-1.73-4.39-6-7.5-11-7.5c-1.4 0-2.74.25-4 .7l2.17 2.15C10.74 7.13 11.35 7 12 7"/></svg>
                     </button>
@@ -84,12 +88,16 @@
                 }
                 ?>
                 
-                <button class="signup-button flex justify-center align-center basic shadow" type="submit"><p class="bold">Sign Up</p></button>
+                <button class="signup-button flex justify-center align-center basic shadow" type="submit">
+                    <strong>Sign Up</strong>
+                </button>
                 
             </form>
             
-            <button class="back-to-login-button"><p class="bold">Back to Login</p></button>
-        </div>
+            <button class="back-to-login-button">
+                <strong>Back to Login</strong>
+            </button>
+        </section>
 
     </div>
 </body>
