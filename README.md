@@ -9,7 +9,7 @@ This is a restaurant web application created for a fictional company named "Edib
 3. Clone this repository to the folder `C:/xampp/htdocs/restaurant-php`.
 4. Run Apache and MySQL from the XAMPP control panel.
 5. Locate the `restaurant.sql` file in the database folder.
-6. Open `http://localhost/phpmyadmin/` and import the `restaurant.sql` file.
+6. Open `http://localhost/phpmyadmin/`, create a database named restaurant, and import the `restaurant.sql` file to it.
 7. Open `http://localhost/restaurant-php/` to run the website.
 
 ## Functions
