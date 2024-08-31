@@ -13,4 +13,10 @@
 
 Icons from <a href="https://iconify.design/" target="_blank" rel="noopener noreferrer">iconify.design</a> 
 
+**Technologies**
 
+Web application designed using <a href="https://figma.com/" target="_blank" rel="noopener noreferrer">figma.com</a>
+
+Web application documented using <a href="https://www.mkdocs.org/" target="_blank" rel="noopener noreferrer">mkdocs.org</a>
+
+documentation deployed using <a href="https://about.readthedocs.com/" target="_blank" rel="noopener noreferrer">about.readthedocs.com</a>

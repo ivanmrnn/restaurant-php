@@ -39,6 +39,8 @@ Menu items and users are fetched and displayed from the database. Users can orde
 
 ## Attributions
 
+**Images**
+
 <a href="https://www.freepik.com/free-photo/dim-sum_1123462.htm#query=food%20transparent&position=25&from_view=keyword&track=ais_user&uuid=b0d9d9ee-f0d8-4305-be2e-3d1101b4d92b" target="_blank" rel="noopener noreferrer">Dimsum Dish image</a> by mrsiraphol on Freepik
 
 <a href="https://www.freepik.com/free-photo/mixed-sashimi-set_3521483.htm#from_view=detail_alsolike" target="_blank" rel="noopener noreferrer">Mixed Sashimi Set image</a> by lifeforstock on Freepik
@@ -51,3 +53,12 @@ Menu items and users are fetched and displayed from the database. Users can orde
 <a href="https://www.figma.com/community/file/1159710650809705970/placeholder-company-logos-ui-kit-untitled-ui" target="_blank" rel="noopener noreferrer">Placeholder Company Icon</a> by Untitled UI on Figma Community
 
 Icons from <a href="https://iconify.design/" target="_blank" rel="noopener noreferrer">iconify.design</a> 
+
+**Technologies**
+
+Web application designed using <a href="https://figma.com/" target="_blank" rel="noopener noreferrer">figma.com</a>
+
+Web application documented using <a href="https://www.mkdocs.org/" target="_blank" rel="noopener noreferrer">mkdocs.org</a>
+
+documentation deployed using <a href="https://about.readthedocs.com/" target="_blank" rel="noopener noreferrer">about.readthedocs.com</a>
+
