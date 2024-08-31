@@ -6,6 +6,9 @@ Menu items and users are fetched and displayed from the database. Users can orde
 
 ## How to run the restaurant web app:
 
+The repository is public and located at <a href="https://github.com/ivanmrnn/restaurant-php" target="_blank" rel="noopener noreferrer">https://github.com/ivanmrnn/restaurant-php</a>
+Documentation available at <a href="https://restaurant-php.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer">https://restaurant-php.readthedocs.io/en/latest/</a>
+
 1. Download and install XAMPP.
 2. Create a folder in `C:/xampp/htdocs` and name it restaurant-php
 3. Clone this repository to the folder `C:/xampp/htdocs/restaurant-php`.
