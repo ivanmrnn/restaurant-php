@@ -1,0 +1,12 @@
+site_name: Restaurant - PHP
+
+nav:
+  - Overview: index.md
+  - Design: design.md
+  - Features: features.md
+  - Attributions: attributions.md
+
+theme: readthedocs
+
+markdown_extensions:
+  - admonition

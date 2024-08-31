@@ -125,7 +125,7 @@
 .footer-contact-svg-container {
     height: 40px;
     width: 40px;
-    background: var(--dark-gray);
+    background: #555555;
     border-radius: 40px;
 }
 

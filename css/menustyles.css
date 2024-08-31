@@ -72,9 +72,9 @@
     color: white;
 }
 
-.proceed-to-checkout-button span {
+.proceed-to-checkout-button strong {
     pointer-events: none;
-  }
+}
 
 .proceed-to-checkout-button.disabled {
     opacity: 0.5;

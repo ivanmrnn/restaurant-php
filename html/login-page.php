@@ -102,16 +102,47 @@
     </div>
 </body>
 <script>
-    
-    document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
+    // Common elements for both signup and login
     const signupContainer = document.getElementById('signup-container');
     const loginContainer = document.getElementById('login-container');
 
+    const backToLoginButton = document.querySelector('.back-to-login-button');
+    const signupPageButton = document.querySelector('.signup-page-button');
+
+    // Toggle between login and signup forms
+    signupPageButton.addEventListener('click', () => {
+        loginContainer.style.display = 'none';
+        signupContainer.style.display = 'flex';
+    });
+
+    backToLoginButton.addEventListener('click', () => {
+        signupContainer.style.display = 'none';
+        loginContainer.style.display = 'flex';
+    });
+
+    // Show signup or login page based on initial condition
+    const initialSignupDisplay = <?php echo $show_signup ? 'true' : 'false'; ?>;
+    if (initialSignupDisplay) {
+        loginContainer.style.display = 'none';
+        signupContainer.style.display = 'flex';
+    } else {
+        loginContainer.style.display = 'flex';
+        signupContainer.style.display = 'none';
+    }
+
+    /* --- Login functionality --- */
     const revealLoginPasswordButton = document.querySelector('.reveal-login-password-button');
     const loginPasswordInput = document.getElementById('login-password');
     const showLoginPasswordIcon = document.querySelector('.show-login-password-icon');
     const hideLoginPasswordIcon = document.querySelector('.hide-login-password-icon');
 
+    // Toggle login password visibility
+    revealLoginPasswordButton.addEventListener('click', () => {
+        togglePasswordVisibility(loginPasswordInput, showLoginPasswordIcon, hideLoginPasswordIcon);
+    });
+
+    /* --- Signup functionality --- */
     const revealSignupPasswordButton = document.querySelector('.reveal-signup-password-button');
     const signupPasswordInput = document.getElementById('signup-password');
     const showSignupPasswordIcon = document.querySelector('.show-signup-password-icon');
@@ -122,13 +153,35 @@
     const showConfirmPasswordIcon = document.querySelector('.show-confirm-password-icon');
     const hideConfirmPasswordIcon = document.querySelector('.hide-confirm-password-icon');
 
-    const backToLoginButton = document.querySelector('.back-to-login-button')
-    const signupPageButton = document.querySelector('.signup-page-button')
-
     const signupForm = document.querySelector('.signup-form');
     const passwordMatchError = document.getElementById('password-match-error');
 
-    // Toggle password visibility functions
+    // Toggle signup and confirm password visibility
+    revealSignupPasswordButton.addEventListener('click', () => {
+        togglePasswordVisibility(signupPasswordInput, showSignupPasswordIcon, hideSignupPasswordIcon);
+    });
+
+    revealConfirmPasswordButton.addEventListener('click', () => {
+        togglePasswordVisibility(confirmPasswordInput, showConfirmPasswordIcon, hideConfirmPasswordIcon);
+    });
+
+    // Check if passwords match during signup
+    function checkPasswordMatch() {
+        return signupPasswordInput.value === confirmPasswordInput.value;
+    }
+
+    // Validate password match on form submission
+    signupForm.addEventListener('submit', function(e) {
+        if (!checkPasswordMatch()) {
+            e.preventDefault();
+            passwordMatchError.style.display = 'block';
+        } else {
+            passwordMatchError.style.display = 'none';
+        }
+    });
+
+    /* --- Helper function --- */
+    // Function to toggle password visibility
     function togglePasswordVisibility(inputElement, showIcon, hideIcon) {
         if (inputElement.type === 'password') {
             inputElement.type = 'text';
@@ -140,44 +193,6 @@
             hideIcon.style.display = 'none';
         }
     }
-
-    revealLoginPasswordButton.addEventListener('click', () => togglePasswordVisibility(loginPasswordInput, showLoginPasswordIcon, hideLoginPasswordIcon));
-    revealSignupPasswordButton.addEventListener('click', () => togglePasswordVisibility(signupPasswordInput, showSignupPasswordIcon, hideSignupPasswordIcon));
-    revealConfirmPasswordButton.addEventListener('click', () => togglePasswordVisibility(confirmPasswordInput, showConfirmPasswordIcon, hideConfirmPasswordIcon));
-
-    signupPageButton.addEventListener('click', () => {
-        loginContainer.style.display = 'none';
-        signupContainer.style.display = 'flex';
-    });
-
-    backToLoginButton.addEventListener('click', () => {
-        signupContainer.style.display = 'none';
-        loginContainer.style.display = 'flex';
-    });
-
-    function checkPasswordMatch() {
-        return signupPasswordInput.value === confirmPasswordInput.value;
-    }
-
-    signupForm.addEventListener('submit', function(e) {
-        if (!checkPasswordMatch()) {
-            e.preventDefault();
-            passwordMatchError.style.display = 'block';
-        } else {
-            passwordMatchError.style.display = 'none';
-        }
-    });
-
-    const initialSignupDisplay = <?php echo $show_signup ? 'true' : 'false'; ?>;
-    if (initialSignupDisplay) {
-        loginContainer.style.display = 'none';
-        signupContainer.style.display = 'flex';
-    } else {
-        loginContainer.style.display = 'flex';
-        signupContainer.style.display = 'none';
-    }
 });
-
-
 </script>
 </html>
